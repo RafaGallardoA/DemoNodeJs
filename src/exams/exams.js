@@ -9,4 +9,10 @@ const promGrades = (grades) => {
     return String(prom)    
 }
 
-module.exports = { sumGrades, promGrades }
+const approvedExam = (grades) => {
+    let prom = promGrades(grades)
+    let approved = (prom >= 8) ? 'Approved' : 'No Approved'
+    return String(approved)    
+}
+
+module.exports = { sumGrades, promGrades, approvedExam }
