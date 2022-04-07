@@ -26,11 +26,3 @@ jobs:
         uses: "pascalgn/automerge-action@v0.15.2"
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-    uses: actions/setup-node@v3
-      with:
-        node-version: '14.x'
-        cache: 'npm'
-    - run: npm install     
-    - run: npm ci
-    - run: npm run build --if-present
-    - run: npm test          
