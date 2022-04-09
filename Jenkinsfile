@@ -18,6 +18,10 @@ pipeline {
         stage("deploy") {
             steps {
                 echo 'deploying the application...'
+                nodejs('Node-10.17') {                
+                    sh 'npm install'    
+                    sh 'npm test'    
+                }
             }
         }
     }
