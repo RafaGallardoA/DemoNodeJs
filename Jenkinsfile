@@ -18,7 +18,7 @@ pipeline {
         stage("deploy") {
             steps {
                 echo 'deploying the application...'
-                nodejs('Node-10.17') {                
+                nodejs('Node-19.9') {                
                     sh 'npm install'    
                     sh 'npm test'    
                 }
